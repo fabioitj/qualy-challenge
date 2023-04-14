@@ -5,6 +5,8 @@
 ### Em um terminal
 cd back
 ### ---
+npm install
+### ---
 npm start
 
 ### Em outro terminal

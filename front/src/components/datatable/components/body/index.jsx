@@ -17,9 +17,9 @@ function columnDataByType(id, data) {
             return <td key={id}><div>{data.join(', ')}</div></td>
         
         case 'string':
-                const date = new Date(data);
-                if(date.toString() !== "Invalid Date")
-                    return <td key={id}><div>{date.toLocaleDateString()}</div></td>
+                const regexDate = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/;
+                if(regexDate.test(data))
+                    return <td key={id}><div>{new Date(data).toLocaleDateString()}</div></td>
                 else    
                     return <td key={id}><div>{data}</div></td>  
         case 'number':

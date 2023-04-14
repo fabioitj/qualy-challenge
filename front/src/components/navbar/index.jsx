@@ -7,14 +7,14 @@ function Navbar() {
 
     return (
         <div className="navbar">
-            <h2 className="navbar__title">Teste da Qualyteam</h2>
+            <h2 className="navbar__title">Qualyteam testing</h2>
             <input id="navbar__check" className="navbar__check" type="checkbox" hidden/>
             <label htmlFor="navbar__check" className="navbar__label">
                 <Menu width={32} sx={{ color: '#FFF' }}/>
             </label>
             <div className="navbar__actions">
-                <LinkedButton path="/nao-conformidade">Não conformidade</LinkedButton>
-                <LinkedButton path="/departamentos">Departamentos</LinkedButton>
+                <LinkedButton path="/non-conformities">Non conformities</LinkedButton>
+                <LinkedButton path="/departments">Departments</LinkedButton>
             </div>
             
         </div>

@@ -8,7 +8,7 @@ function DataTableHeader({columns}) {
                 {columns && columns.map(column => (
                     <th key={column.id} style={{ width: column.width }}>{column.title}</th>
                 ))}
-                <th style={{ textAlign: 'center' }}>Ações</th>
+                <th style={{ textAlign: 'center' }}>Actions</th>
             </tr>
         </thead>
     )

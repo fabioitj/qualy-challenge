@@ -3,26 +3,27 @@ import "./styles.scss";
 import { Routes } from "react-router-dom";
 import { Navigate, Route } from "react-router";
 
-import NaoConformidadePage from "../../pages/nao-conformidade";
-import DepartamentosPage from "../../pages/departamentos";
-import CriarDepartamentoPage from "../../pages/departamentos/criar-departamento";
-import EditarDepartamentoPage from "../../pages/departamentos/editar-departamento";
-import CriarNaoConformidadePage from "../../pages/nao-conformidade/features/criar-nao-conformidade";
-import EditarNaoConformidadePage from "../../pages/nao-conformidade/features/editar-nao-conformidade";
+import NonConformitiesPage from "../../pages/non-conformities";
+import CreateNonConformitiePage from "../../pages/non-conformities/features/create-non-conformitie";
+import EditNonConformitiePage from "../../pages/non-conformities/features/edit-non-conformitie";
+
+import DepartmentsPage from "../../pages/departments";
+import CreateDepartmentPage from "../../pages/departments/create-department";
+import EditDepartmentPage from "../../pages/departments/edit-department";
 
 function Content() {
     return (
         <div className="content">
             <Routes>
-                <Route path="/" element={<Navigate to="/nao-conformidade" replace/>}></Route>
+                <Route path="/" element={<Navigate to="/non-conformities" replace/>}></Route>
 
-                <Route path="/nao-conformidade" element={<NaoConformidadePage/>}></Route>
-                <Route path="/nao-conformidade/criar" element={<CriarNaoConformidadePage/>}></Route>
-                <Route path="/nao-conformidade/:id" element={<EditarNaoConformidadePage/>}></Route>
+                <Route path="/non-conformities" element={<NonConformitiesPage/>}></Route>
+                <Route path="/non-conformities/create" element={<CreateNonConformitiePage/>}></Route>
+                <Route path="/non-conformities/:id" element={<EditNonConformitiePage/>}></Route>
 
-                <Route path="/departamentos" element={<DepartamentosPage/>}></Route>
-                <Route path="/departamentos/criar" element={<CriarDepartamentoPage/>}></Route>
-                <Route path="/departamentos/:id" element={<EditarDepartamentoPage/>}></Route>
+                <Route path="/departments" element={<DepartmentsPage/>}></Route>
+                <Route path="/departments/create" element={<CreateDepartmentPage/>}></Route>
+                <Route path="/departments/:id" element={<EditDepartmentPage/>}></Route>
             </Routes>
         </div>
     );

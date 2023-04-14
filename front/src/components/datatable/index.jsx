@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./styles.scss";
 import { CircularProgress, IconButton } from "@mui/material";
 import { ArrowBack, ArrowForward } from "@mui/icons-material";
@@ -13,6 +13,7 @@ const getTotalPages = (data, unitsPerPage) => {
 
 function DataTable({columns, data, unitsPerPage = 5, pathEdit, onRemove}) {
     const [page, setPage] = useState(1);
+    const [isLoading, setIsLoading] = useState(true);
     const total_pages = getTotalPages(data, unitsPerPage) || 1;
     
     const handleNextPage = () => {
@@ -31,17 +32,21 @@ function DataTable({columns, data, unitsPerPage = 5, pathEdit, onRemove}) {
 
     const verifyOnRemove = (id) => {
         const isLastPage = page === total_pages;
-        if(data && Math.ceil((data.length - 1) / unitsPerPage) < total_pages && isLastPage) {
+        if(data && Math.ceil((data.length - 1) / unitsPerPage) < total_pages && isLastPage && data.length > 1) {
             setPage(page => page - 1);
         }
 
         onRemove(id);
     }
 
+    useEffect(() => {
+        setTimeout(() => setIsLoading(false), 500);
+    }, [])
+
     return (
         <>
             {
-                !data || (data && data.length === 0) ? (
+                !data || isLoading ? (
                     <CircularProgress color="inherit" style={{ alignSelf: 'center'}}/>
                 ) : (
                     <>

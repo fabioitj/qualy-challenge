@@ -17,7 +17,7 @@
         border-radius: 4px;
         
 
-        & div:nth-child(3) {
+        & > div:nth-child(3) {
             background-color: transparent;
             border-color: black;
         }

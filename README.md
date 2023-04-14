@@ -9,7 +9,7 @@
 ####
 > npm start
 
-### Front-endl
+### Front-end
 > cd front
 ####
 > npm install

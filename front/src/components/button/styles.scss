@@ -1,0 +1,11 @@
+.button {
+    color: black;
+    border: 1px solid rgb(218, 218, 218);
+    padding: 0.5em 1em;
+    transition: 0.2s all;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.25);
+    }
+}

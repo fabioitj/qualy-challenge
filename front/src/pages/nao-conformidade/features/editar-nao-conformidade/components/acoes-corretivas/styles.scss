@@ -1,0 +1,32 @@
+.acoes-corretivas {
+    overflow-x: scroll;
+    width: 100%;
+
+    &__datatable {
+        
+        background-color: #f3f3f3;
+        width: 100%;
+        
+        
+        &__header{
+        
+            & th {
+                text-align: left;
+                padding: 0.5em;
+            }
+            
+        }
+    
+        &__body {
+           
+            & td {
+                text-align: left;
+                padding: 0.5em;
+            }
+        }
+    }
+}
+
+.react-datepicker-popper {
+    position: fixed !important;
+}

@@ -1,0 +1,44 @@
+.field {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &__label {
+        position: absolute;
+        top: 0.75em;
+        left: 1.5em;
+        font-size: 0.8em;
+        transition: 0.2s all;
+        color: #333;
+    }
+
+    &__input {
+        background-color: transparent;
+        padding: .75em;
+        border-radius: 4px;
+        border: 1px solid black;
+    }
+
+    &:focus-within > &__input {
+    }
+
+    &:focus-within > &__label {
+        top: -.75em;
+        left: 1em;
+        padding: 0 0.2em;
+        background-color: #f5f5f5;
+        color: #000;
+    }
+
+    &__label-typed {
+        top: -.75em;
+        left: 1em;
+        padding: 0 0.2em;
+        background-color: #f5f5f5;
+        color: #000;
+    }
+
+    &__input-typed {
+    }
+}
+

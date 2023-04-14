@@ -1,0 +1,50 @@
+.select {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: transparent;
+
+    &__label {
+        position: absolute;
+        top: 0.75em;
+        left: 1.5em;
+        font-size: 0.8em;
+        transition: 0.2s all;
+        color: #333;
+    }
+
+    &__field {
+        border-radius: 4px;
+        
+
+        & div:nth-child(3) {
+            background-color: transparent;
+            border-color: black;
+        }
+    }
+
+    &:focus-within > &__field {
+    }
+
+    &:focus-within > &__label {
+        z-index: 1;
+        top: -.75em;
+        left: 1em;
+        padding: 0 0.2em;
+        background-color: #f5f5f5;
+        color: #000;
+    }
+
+    &__label-typed {
+        z-index: 1;
+        top: -.75em;
+        left: 1em;
+        padding: 0 0.2em;
+        background-color: #f5f5f5;
+        color: #000;
+    }
+
+    &__field-typed {
+    }
+}
+

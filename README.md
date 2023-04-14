@@ -2,14 +2,14 @@
 
 ## Comandos necessários
 
-### Em um terminal
+### Back-end
 cd back
 ### ---
 npm install
 ### ---
 npm start
 
-### Em outro terminal
+### Front-endl
 cd front
 ### ---
 npm install

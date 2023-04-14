@@ -3,19 +3,19 @@
 ## Comandos necessários
 
 ### Back-end
-cd back
-### ---
-npm install
-### ---
-npm start
+> cd back
+####
+> npm install
+####
+> npm start
 
 ### Front-endl
-cd front
-### ---
-npm install
+> cd front
+####
+> npm install
 
 #### Para rodar local
-npm run dev
+> npm run dev
 
 #### Para testar local
-npm test
+> npm test
